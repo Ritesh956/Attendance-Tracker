@@ -141,7 +141,7 @@ export default function Dashboard() {
       
       // Extract dates for labels and totals for data
       const labels = dailyTotals.map(day => formatDate(new Date(day.date), 'MMM d'));
-      const data = dailyTotals.map(day => day.total / 100); // Convert paise to rupees
+      const data = dailyTotals.map(day => day.total); // Use total as is
       
       new Chart(weeklyChartRef.current, {
         type: 'bar',
@@ -226,7 +226,7 @@ export default function Dashboard() {
           <p className="mt-2 text-2xl font-bold font-mono">
             {isSummaryLoading 
               ? <span className="animate-pulse">₹---</span>
-              : `₹${formatCurrency(summary?.today.total / 100)}`
+              : `₹${formatCurrency(summary?.today.total)}`
             }
           </p>
           <div className="mt-2 flex items-center text-xs">
@@ -258,7 +258,7 @@ export default function Dashboard() {
           <p className="mt-2 text-2xl font-bold font-mono">
             {isSummaryLoading 
               ? <span className="animate-pulse">₹---</span>
-              : `₹${formatCurrency(summary?.week.total / 100)}`
+              : `₹${formatCurrency(summary?.week.total)}`
             }
           </p>
           <div className="mt-2 flex items-center text-xs">
@@ -290,7 +290,7 @@ export default function Dashboard() {
           <p className="mt-2 text-2xl font-bold font-mono">
             {isSummaryLoading 
               ? <span className="animate-pulse">₹---</span>
-              : `₹${formatCurrency(summary?.month.total / 100)}`
+              : `₹${formatCurrency(summary?.month.total)}`
             }
           </p>
           <div className="mt-2 flex items-center text-xs">
@@ -392,7 +392,7 @@ export default function Dashboard() {
                     </p>
                   </div>
                 </div>
-                <p className="font-mono font-medium">₹{formatCurrency(expense.amount / 100)}</p>
+                <p className="font-mono font-medium">₹{formatCurrency(expense.amount)}</p>
               </div>
             ))
           )}
