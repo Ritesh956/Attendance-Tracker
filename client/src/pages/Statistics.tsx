@@ -442,7 +442,7 @@ export default function Statistics() {
             {isExpensesLoading ? (
               <span className="animate-pulse">₹---</span>
             ) : (
-              `₹${formatCurrency(stats?.totalSpending ? stats.totalSpending / 100 : 0)}`
+              `₹${formatCurrency(stats?.totalSpending ? stats.totalSpending : 0)}`
             )}
           </p>
           <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{getDateRangeText()}</p>
@@ -454,7 +454,7 @@ export default function Statistics() {
             {isExpensesLoading ? (
               <span className="animate-pulse">₹---</span>
             ) : (
-              `₹${formatCurrency(stats?.averageDaily ? stats.averageDaily / 100 : 0)}`
+              `₹${formatCurrency(stats?.averageDaily ? stats.averageDaily : 0)}`
             )}
           </p>
           <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -471,7 +471,7 @@ export default function Statistics() {
             {isExpensesLoading ? (
               <span className="animate-pulse">₹---</span>
             ) : stats?.highestExpense?.amount ? (
-              `₹${formatCurrency(stats.highestExpense.amount / 100)}`
+              `₹${formatCurrency(stats.highestExpense.amount)}`
             ) : (
               "₹0"
             )}
@@ -583,7 +583,7 @@ export default function Statistics() {
                           <span className="text-sm">{mode}</span>
                         </div>
                         <span className="text-sm font-mono font-medium">
-                          ₹{formatCurrency(amount / 100)} ({percentage}%)
+                          ₹{formatCurrency(amount)} ({percentage}%)
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
@@ -621,7 +621,7 @@ export default function Statistics() {
                       {formatDate(new Date(expense.date), 'dd MMM')} • {expense.category}
                     </p>
                   </div>
-                  <span className="font-mono font-medium">₹{formatCurrency(expense.amount / 100)}</span>
+                  <span className="font-mono font-medium">₹{formatCurrency(expense.amount)}</span>
                 </li>
               ))}
             </ul>
