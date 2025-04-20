@@ -1,4 +1,4 @@
-import { useContext, createContext, useState, ReactNode } from 'react';
+import React, { useContext, createContext, useState, ReactNode } from 'react';
 
 // Define the context type
 interface ExpenseContextType {
@@ -13,7 +13,7 @@ const ExpenseContext = createContext<ExpenseContextType>({
 });
 
 // Provider component
-export function ExpenseProvider({ children }: { children: ReactNode }) {
+export const ExpenseProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [showExpenseForm, setShowExpenseForm] = useState(false);
 
   return (

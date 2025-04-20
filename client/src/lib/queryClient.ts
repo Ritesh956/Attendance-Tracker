@@ -47,8 +47,10 @@ export const queryClient = new QueryClient({
       queryFn: getQueryFn({ on401: "throw" }),
       refetchInterval: false,
       refetchOnWindowFocus: false,
-      staleTime: Infinity,
+      staleTime: 300000, // 5 minutes
       retry: false,
+      keepPreviousData: true, // Keep previous data while new data is being fetched
+      suspense: false, // Don't use React Suspense
     },
     mutations: {
       retry: false,

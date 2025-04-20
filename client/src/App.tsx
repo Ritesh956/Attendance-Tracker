@@ -1,3 +1,4 @@
+import React from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -10,7 +11,6 @@ import Expenses from "@/pages/Expenses";
 import Statistics from "@/pages/Statistics";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ExpenseProvider } from "./lib/hooks/use-expenses";
-// Fix import consistency
 
 function Router() {
   return (
