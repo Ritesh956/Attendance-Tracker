@@ -352,9 +352,12 @@ export default function Dashboard() {
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700">
         <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
           <h3 className="font-medium">Recent Transactions</h3>
-          <Link href="/expenses">
-            <a className="text-primary text-sm hover:underline">View All</a>
-          </Link>
+          <div 
+            onClick={() => window.location.href = "/expenses"}
+            className="text-primary text-sm hover:underline cursor-pointer"
+          >
+            View All
+          </div>
         </div>
         <div className="divide-y divide-gray-200 dark:divide-gray-700">
           {isExpensesLoading ? (

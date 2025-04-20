@@ -8,9 +8,9 @@ import Layout from "@/components/Layout";
 import Dashboard from "@/pages/Dashboard";
 import Expenses from "@/pages/Expenses";
 import Statistics from "@/pages/Statistics";
-import { useState } from "react";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ExpenseProvider } from "./lib/hooks/use-expenses";
+// Fix import consistency
 
 function Router() {
   return (
