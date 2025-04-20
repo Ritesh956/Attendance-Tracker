@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": 1,
+    "description": "",
+    "category": "Food",
+    "paymentMode": "UPI",
+    "notes": "",
+    "amount": 500,
+    "date": "2025-04-20T19:11:45.700Z"
+  },
+  {
+    "id": 2,
+    "description": "",
+    "category": "Travel",
+    "paymentMode": "UPI",
+    "notes": "",
+    "amount": 7000,
+    "date": "2025-04-20T19:12:52.362Z"
+  }
+]

@@ -28,15 +28,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ message: validationError.message });
       }
 
-      // Convert amount from rupees to paise if it's a decimal
+      // Use amount as is, no conversion to paise
       const { amount, ...rest } = validationResult.data;
-      const amountInPaise = Number.isInteger(amount) 
-        ? amount 
-        : Math.round(amount * 100);
 
       const expense = await storage.createExpense({ 
         ...rest, 
-        amount: amountInPaise
+        amount
       });
       
       res.status(201).json(expense);

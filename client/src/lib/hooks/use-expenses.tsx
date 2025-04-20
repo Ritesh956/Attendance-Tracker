@@ -13,7 +13,7 @@ const ExpenseContext = createContext<ExpenseContextType>({
 });
 
 // Provider component
-export function ExpenseProvider({ children }: { children: ReactNode }): JSX.Element {
+export function ExpenseProvider({ children }: { children: ReactNode }) {
   const [showExpenseForm, setShowExpenseForm] = useState(false);
 
   return (
