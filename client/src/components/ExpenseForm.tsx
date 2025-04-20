@@ -93,12 +93,15 @@ export default function ExpenseForm({ onClose }: ExpenseFormProps) {
               <input
                 type="number"
                 id="amount"
-                step="0.01"
+                step="1"
+                min="1"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 {...register("amount", { valueAsNumber: true })}
                 className={`block w-full pl-8 pr-4 py-2 border ${
                   errors.amount ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                 } bg-white dark:bg-gray-700 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
-                placeholder="0.00"
+                placeholder="0"
               />
             </div>
             {errors.amount && (
@@ -154,16 +157,35 @@ export default function ExpenseForm({ onClose }: ExpenseFormProps) {
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Payment Mode
             </label>
-            <div className="flex space-x-4">
+            <div className="flex gap-3">
               {paymentModes.map((mode) => (
-                <label key={mode} className="inline-flex items-center">
+                <label 
+                  key={mode} 
+                  className="flex-1 relative cursor-pointer"
+                >
                   <input
                     type="radio"
                     {...register("paymentMode")}
                     value={mode}
-                    className="form-radio h-4 w-4 text-primary border-gray-300 dark:border-gray-600 focus:ring-primary"
+                    className="peer sr-only"
                   />
-                  <span className="ml-2">{mode}</span>
+                  <div className="w-full text-center py-2 px-3 border-2 rounded-lg peer-checked:border-primary peer-checked:bg-primary/10 transition-all border-gray-300 dark:border-gray-600 dark:peer-checked:bg-primary/20">
+                    {mode === "Cash" ? (
+                      <span className="flex items-center justify-center gap-2">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        Cash
+                      </span>
+                    ) : (
+                      <span className="flex items-center justify-center gap-2">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                        UPI
+                      </span>
+                    )}
+                  </div>
                 </label>
               ))}
             </div>
