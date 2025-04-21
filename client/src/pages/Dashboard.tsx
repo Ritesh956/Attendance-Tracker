@@ -41,8 +41,8 @@ const categoryIcons = {
 };
 
 const categoryColors = {
-  "Food": "bg-primary bg-opacity-10 text-primary-dark dark:text-primary",
-  "Travel": "bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-300",
+  "Food": "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-300",
+  "Travel": "bg-amber-100 dark:bg-amber-700 text-amber-800 dark:text-amber-300",
   "Fun": "bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-300",
   "Study": "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300",
   "Other": "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300"

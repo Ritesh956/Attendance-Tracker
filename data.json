@@ -7,5 +7,68 @@
     "notes": "",
     "amount": 5550,
     "date": "2025-04-20T19:25:40.639Z"
+  },
+  {
+    "id": 4,
+    "description": "Turf",
+    "category": "Fun",
+    "paymentMode": "UPI",
+    "notes": "",
+    "amount": 160,
+    "date": "2025-04-20T19:34:56.089Z"
+  },
+  {
+    "id": 5,
+    "description": "Shawarma",
+    "category": "Food",
+    "paymentMode": "Cash",
+    "notes": "",
+    "amount": 300,
+    "date": "2025-04-20T20:10:11.115Z"
+  },
+  {
+    "id": 6,
+    "description": "",
+    "category": "Study",
+    "paymentMode": "UPI",
+    "notes": "",
+    "amount": 567,
+    "date": "2025-04-20T20:53:16.305Z"
+  },
+  {
+    "id": 7,
+    "description": "",
+    "category": "Fun",
+    "paymentMode": "Cash",
+    "notes": "",
+    "amount": 54,
+    "date": "2025-04-20T20:53:29.307Z"
+  },
+  {
+    "id": 8,
+    "description": "Cake",
+    "category": "Food",
+    "paymentMode": "Cash",
+    "notes": "",
+    "amount": 50,
+    "date": "2025-04-20T20:53:49.287Z"
+  },
+  {
+    "id": 9,
+    "description": "",
+    "category": "Other",
+    "paymentMode": "UPI",
+    "notes": "",
+    "amount": 110,
+    "date": "2025-04-20T20:56:57.644Z"
+  },
+  {
+    "id": 10,
+    "description": "",
+    "category": "Travel",
+    "paymentMode": "UPI",
+    "notes": "",
+    "amount": 645,
+    "date": "2025-04-21T09:07:58.191Z"
   }
 ]

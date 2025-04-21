@@ -30,7 +30,7 @@ const sortOptions = [
 
 // Category badge colors
 const categoryBadgeColors = {
-  "Food": "bg-primary bg-opacity-10 text-primary-dark dark:text-primary",
+  "Food": "bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-300",
   "Travel": "bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-300",
   "Fun": "bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-300",
   "Study": "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300",
@@ -288,7 +288,7 @@ export default function Expenses() {
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {paginatedExpenses.map((expense: Expense) => (
-                  <tr key={expense.id} className="hover:bg-gray-50 dark:hover:bg-gray-750">
+                  <tr key={expense.id} className="">
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
                       <div className="font-medium">{formatDate(new Date(expense.date), 'dd MMM yyyy')}</div>
                       <div className="text-gray-500 dark:text-gray-400 text-xs">
